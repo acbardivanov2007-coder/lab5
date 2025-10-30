@@ -10,7 +10,7 @@
         {
          for (m=min, M=max+1; m != M; m++)
                  summ = summ + m*m;
-         printf("сумма квадратов целых чисел от %d до %d равна %d\n", min*min, max*max, summ);
+         printf("сумма квадратов целых чисел от %d до %d равна %d\n", min, max, summ);
          summ=0;                       
          printf("введите следующую комбинацию пределов:\n");
          scanf("%d %d", &min, &max);
