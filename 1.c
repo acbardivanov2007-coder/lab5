@@ -1,10 +1,10 @@
 #include <stdio.h>
  int main()
  {
-   char alphavit[26];
+   char alphavit[27];
    char bukva;
    int chislo;
-   for (chislo=0, bukva = 'a'; chislo<26; chislo++)
+   for (chislo=1, bukva = 'a'; chislo<27; chislo++)
         {
         alphavit[chislo] = bukva++; 
         printf("индекс [%d] это буква %c\n", chislo, alphabvit[chislo]);
