@@ -1,27 +1,29 @@
- #include <stdio.h>
- int main(void)
- {
+#include <stdio.h>
+int main(void)
+{
    int masiv1[8], masiv2[8];
    int i;
-   int summa=0;
+   int summa = 0;
+   char c;
    printf("введите 8 чисел:\n");
-   masiv2[0]=0;
-   for (i = 0; i<8; i++)
-          {
-          scanf("%d", &masiv1[i]);
-          summa+=masiv1[i];
-          masiv2[i]=summa;
-          }
-   i=0;
-   for (i = 0; i<8; i++)
-          {
-          printf("%5d", masiv1[i]);
-          }
-   i=0;
+   for (i = 0; i < 8; i++)
+   {
+      while (scanf("%d", &masiv1[i]) != 1)
+      {
+         printf("ошибка ввода\n");
+         while ((c = getchar()) != '\n' && c != EOF);
+      }
+      summa += masiv1[i];
+      masiv2[i] = summa;
+   }
+   for (i = 0; i < 8; i++)
+   {
+      printf("%5d", masiv1[i]);
+   }
    printf("\n");
-   for (i = 0; i<8; i++)
-          {
-           printf("%5d", masiv2[i]);
-          }
+   for (i = 0; i < 8; i++)
+   {
+      printf("%5d", masiv2[i]);
+   }
    return 0;
- }
+}
